@@ -1,23 +1,23 @@
 package academy.learnprogramming;
 
+
+import java.util.Scanner;
+
 public class Main {
+
 
     public static void main(String[] args) {
 
+        Goblin g= new Goblin();
 
-
-
-        String myLand [][] = {{"[]", "[]", "[]",},
-                { "[]", "[]", "[]"},
-                {"[]", "[]", "[]"}};
-
-        for (int rows = 0; rows < 3; rows++){         // iterating through the rows
-            System.out.println();
-            for(int columns = 0; columns < 3; columns++){
-                System.out.print( myLand[rows][columns] + " ");  // iterating through the columns
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                g.board[i][j] = '_';
             }
         }
-
+        System.out.println("*****Lets Play Humans Vs.Goblins.\n Try to stay as far away from your opponent, " +
+                "AVOID RANDOM HOT SPOTS*****");
+        g.Play();
 
     }
 
